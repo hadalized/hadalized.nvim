@@ -13,9 +13,9 @@ With `lazy`, add
 ```lua
 return {
     {
-        "shawnohare/hadalized.nvim",
+        "hadalized/hadalized.nvim",
         opts = {
-            italic = false, -- disables all italic text.
+            italic = false, -- example to disable all italic text.
         },
         priority = 1000,
         dependencies = { },
@@ -26,27 +26,20 @@ return {
 ## Theme generation
 
 The palettes defined in [colors/*](./colors) are generated using the
-[hadalized](https://github.com/shawnohare/hadalized) theme builder python
-application.
+[hadalized](https://github.com/hadalized/hadalized) theme builder.
 
 To generate all theme files, assuming `uv` and `just` are installed
 
 ```sh
-git clone https://github.com/shawnohare/hadalized
+git clone https://github.com/hadalized/hadalized
 just
 ```
+
+Equivalently
+```sh
+uv tool install hadalized
+hdl build neovim --output=colors
+```
+
 This will invoke the `hadalized` application and copy the built neovim
 files into `./colors`.
-
-
-### Overriding configuration defaults
-
-To generate your own hadalized variants
-
-```py
-from hadalized.writer import Config, run
-
-if __name__ == "__main__":
-    config = Config(...)  # set your overrides
-    run(config)
-```
