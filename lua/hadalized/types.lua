@@ -15,7 +15,6 @@
 ---@field magenta string Hue 11.
 ---@field rose    string Hue 12.
 
-
 ---Base named relative to theme.
 ---@class (exact) BaseMap
 ---@field bg        string Main background.
@@ -32,7 +31,6 @@
 ---@field op2       string Foreground or opposite mode tertiary bg.
 ---@field op1       string Foreground or opposite mode secondary bg.
 ---@field op        string Opposite mode main bg.
-
 
 --- Grayscale colors.
 ---@class (exact) Grayscale
@@ -52,7 +50,6 @@
 ---@field hl      HueMap The bright hue group.
 ---@field base    BaseMap Foregrounds and backgrounds.
 ---@field gs      Grayscale Named grayscale colors.
-
 
 -- Class below is more for easy documentation. Use vim.api.keyset.highlight
 ---@class Highlight
